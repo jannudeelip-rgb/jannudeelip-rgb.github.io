@@ -1,57 +1,472 @@
-<section id="experience">
-  <div class="section-header">
-    <h2>Experience</h2>
-    <span class="section-tag"><span>Work</span> History</span>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jahnavi Bidaraguppe Muniraju | Technical Business Analyst & Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050509;
+      --bg-alt: #0b0c12;
+      --card: #11121b;
+      --card-soft: #151724;
+      --accent: #f5b841;
+      --accent-soft: rgba(245, 184, 65, 0.12);
+      --accent-strong: #f59e0b;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --border: #272938;
+      --chip-bg: #181927;
+      --chip-border: #3b3d4f;
+      --shadow-soft: 0 22px 55px rgba(0, 0, 0, 0.7);
+      --radius-lg: 20px;
+      --radius-md: 999px;
+      --radius-sm: 10px;
+    }
 
-  <!-- CBA EXPERIENCE -->
-  <div class="experience-item">
-    <div class="exp-header">
-      <div>
-        <div class="exp-role">Developer &amp; Technical Business Analyst</div>
-        <div class="exp-company">Commonwealth Bank of Australia (CBA)</div>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1b1c2a 0, #050509 55%, #020308 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+      gap: 20px;
+      padding: 26px 26px 22px;
+      border-radius: 26px;
+      background: radial-gradient(circle at top left, #1b1c2a 0, #10111b 45%, #050509 100%);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(249, 250, 251, 0.06);
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+    }
+
+    @media (max-width: 880px) {
+      header {
+        grid-template-columns: minmax(0, 1fr);
+        position: static;
+      }
+    }
+
+    .identity {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 11px;
+      border-radius: var(--radius-md);
+      background: rgba(15, 17, 28, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    @media (max-width: 880px) {
+      .actions {
+        align-items: flex-start;
+      }
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: var(--radius-md);
+      padding: 9px 16px;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      transition: all 0.18s ease-out;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f5b841, #f59e0b);
+      color: #111827;
+      font-weight: 600;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.45);
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 17, 28, 0.9);
+      color: var(--muted);
+    }
+
+    main {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 22px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #181927 0, #0b0c12 55%, #050509 100%);
+      border: 1px solid var(--border);
+      padding: 18px 20px 18px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+    }
+
+    h2 {
+      font-size: 1.02rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .summary {
+      font-size: 0.96rem;
+      color: #e5e7f5;
+    }
+
+    .summary strong {
+      color: var(--accent);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: var(--radius-md);
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      color: var(--muted);
+    }
+
+    .chip-accent {
+      background: var(--accent-soft);
+      border-color: rgba(245, 184, 65, 0.7);
+      color: #fef3c7;
+    }
+
+    ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #d1d5f0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      margin-top: 6px;
+    }
+
+    th, td {
+      padding: 6px 6px;
+      text-align: left;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    tbody tr:nth-child(odd) {
+      background: rgba(15, 17, 28, 0.7);
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(15, 17, 28, 0.4);
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: var(--radius-md);
+      background: rgba(15, 17, 28, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .pill span {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- UPDATED HEADER -->
+    <header>
+      <div class="identity">
+        <div class="name">Jahnavi Bidaraguppe Muniraju</div>
+        <div class="title">Technical Business Analyst &amp; Developer · Banking &amp; Financial Services</div>
+        <div class="meta">
+          <span>Sydney, NSW 2114</span>
+          <span><a href="mailto:Jannudeelip@gmail.com">Jannudeelip@gmail.com</a></span>
+          <span>Company: TCS – Tata Consultancy Services</span>
+        </div>
       </div>
-      <div class="exp-meta">Nov 2020 – Present · Sydney, Australia</div>
-    </div>
 
-    <ul>
-      <!-- DEVELOPMENT & BUSINESS WORK FIRST -->
-      <li>Managed and enhanced a .NET Business Lending application aligned to evolving business needs.</li>
-      <li>Interacted with business stakeholders to gather and refine requirements for APIs and application enhancements.</li>
-      <li>Executed data migration and consolidation strategies.</li>
-      <li>Developed and maintained SOPs for system functions.</li>
-      <li>Provided technical support for reports, dashboards, and BI tools.</li>
-      <li>Identified risks and proposed mitigation strategies.</li>
-
-      <!-- SUPPORT WORK MOVED BELOW -->
-      <li>Part of PMS &amp; Swift L2 team supporting BAU transactions and payments.</li>
-      <li>Provided incident resolution and production support for critical payment flows.</li>
-      <li>Troubleshooting and resolving system and program issues across production environments.</li>
-    </ul>
-
-    <div class="exp-tech">
-      <span class="pill"><span>Tech</span> .NET · SQL · API onboarding · Business Lending systems · PMS · Swift</span>
-    </div>
-  </div>
-
-  <!-- LCH EXPERIENCE -->
-  <div class="experience-item">
-    <div class="exp-header">
-      <div>
-        <div class="exp-role">Operations Engineer</div>
-        <div class="exp-company">LCH Ltd</div>
+      <div class="actions">
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="window.print()">Download / Print PDF</button>
+          <a class="btn btn-outline" href="#experience">View Experience</a>
+        </div>
+        <div class="tagline">
+          8+ years delivering scalable solutions across banking, payments, and investment products.
+        </div>
       </div>
-      <div class="exp-meta">Jun 2018 – Mar 2020</div>
-    </div>
+    </header>
 
-    <ul>
-      <li>Managed and maintained applications including TCS Bancs and Oracle Service Bus in production.</li>
-      <li>Delivered L2/L3 support aligned with ITIL processes (incident, problem, and change management).</li>
-      <li>Performed bug fixing, performance tuning, and service management for critical financial systems.</li>
-    </ul>
+    <main>
 
-    <div class="exp-tech">
-      <span class="pill"><span>Tech</span> PL/SQL · Unix · Oracle Service Bus · ITIL</span>
-    </div>
+      <!-- SUMMARY -->
+      <div>
+        <section id="summary">
+          <h2>Professional Summary</h2>
+          <p class="summary">
+            Technical Business Analyst and Developer with <strong>8+ years</strong> of experience delivering scalable solutions across
+            banking and financial services. Strong expertise in <strong>API onboarding</strong>, <strong>AI‑assisted development</strong>,
+            containerisation, and cloud migration. Proven ability to translate business requirements into robust technical solutions,
+            manage production systems, and drive continuous improvement.
+          </p>
+          <div class="chips">
+            <span class="chip chip-accent">API &amp; Cloud Engineering</span>
+            <span class="chip">AI‑Driven Development</span>
+            <span class="chip">Business &amp; Investment Banking</span>
+            <span class="chip">L2/L3 Support · ITIL</span>
+          </div>
+        </section>
+
+        <!-- UPDATED EXPERIENCE -->
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <!-- CBA -->
+          <div class="experience-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Developer &amp; Technical Business Analyst</div>
+                <div class="exp-company">Commonwealth Bank of Australia (CBA)</div>
+              </div>
+              <div class="exp-meta">Nov 2020 – Present · Sydney, Australia</div>
+            </div>
+
+            <ul>
+              <!-- DEVELOPMENT FIRST -->
+              <li>Managed and enhanced a .NET Business Lending application aligned to evolving business needs.</li>
+              <li>Interacted with business stakeholders to gather and refine requirements for APIs and application enhancements.</li>
+              <li>Executed data migration and consolidation strategies.</li>
+              <li>Developed and maintained SOPs for system functions.</li>
+              <li>Provided technical support for reports, dashboards, and BI tools.</li>
+              <li>Identified risks and proposed mitigation strategies.</li>
+
+              <!-- SUPPORT MOVED BELOW -->
+              <li>Part of PMS &amp; Swift L2 team supporting BAU transactions and payments.</li>
+              <li>Provided incident resolution and production support for critical payment flows.</li>
+              <li>Troubleshooting and resolving system and program issues across production environments.</li>
+            </ul>
+
+            <div class="exp-tech">
+              <span class="pill"><span>Tech</span> .NET · SQL · API onboarding · Business Lending · PMS · Swift</span>
+            </div>
+          </div>
+
+          <!-- LCH -->
+          <div class="experience-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Operations Engineer</div>
+                <div class="exp-company">LCH Ltd</div>
+              </div>
+              <div class="exp-meta">Jun 2018 – Mar 2020</div>
+            </div>
+
+            <ul>
+              <li>Managed and maintained applications including TCS Bancs and Oracle Service Bus in production.</li>
+              <li>Delivered L2/L3 support aligned with ITIL processes.</li>
+              <li>Performed bug fixing, performance tuning, and service management for critical financial systems.</li>
+            </ul>
+
+            <div class="exp-tech">
+              <span class="pill"><span>Tech</span> PL/SQL · Unix · Oracle Service Bus · ITIL</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- AWARDS -->
+        <section id="awards">
+          <h2>Achievements &amp; Awards</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Award</th>
+                <th>Date</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Best Team Award</td><td>Feb 2022</td><td>Awards for Excellence</td></tr>
+              <tr><td>On the Spot (Team) Award</td><td>Nov 2021</td><td>Awards for Excellence</td></tr>
+              <tr><td>On The Spot Award</td><td>Oct 2021</td><td>Awards for Excellence</td></tr>
+              <tr><td>Service &amp; Commitment Award</td><td>Mar 2021</td><td>Service Awards</td></tr>
+              <tr><td>Best Team Award</td><td>Mar 2021</td><td>Awards for Excellence</td></tr>
+              <tr><td>Star Team Award</td><td>Feb 2019</td><td>Awards for Excellence</td></tr>
+              <tr><td>ILP Kudos Award</td><td>Jun 2018</td><td>Learning Awards</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+
+        <!-- SKILLS -->
+        <section id="skills">
+          <h2>Core Skills</h2>
+          <ul>
+            <li>API onboarding, cloud migration, containerisation</li>
+            <li>AI‑assisted development (Roo Code, Claude)</li>
+            <li>.NET, SQL, PL/SQL, Unix Shell Scripting, AWS</li>
+            <li>Visual Studio, GitHub, Oracle DB, Tanium, Control‑M, Geneos</li>
+            <li>Business Banking, Investment Banking, Derivatives, Lending</li>
+            <li>L2/L3 support, ITIL, performance tuning</li>
+            <li>Team management, stakeholder engagement, mentoring</li>
+          </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+          <h2>Education</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Qualification</th>
+                <th>Discipline</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Bachelor of Engineering</td><td>Computer Science &amp; Engineering</td><td>72.58%</td></tr>
+              <tr><td>Standard XII / HSC</td><td>PCM &amp; Biology</td><td>82.17%</td></tr>
+              <tr><td>SSLC</td><td>General</td><td>92.32%</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- EXTRA -->
+        <section id="extra">
+          <h2>Additional Details</h2>
+          <ul>
+            <li>Adaptive and quick to learn new technologies.</li>
+            <li>Strong analytical and problem‑solving mindset.</li>
+            <li>Good domain knowledge in investment and business banking.</li>
+            <li>Managed a team of 5 and trained graduate trainees.</li>
+            <li>Developed automated task scheduler jobs for fee‑overcharging detection.</li>
+            <li>Migrated Business Lending application from physical OC3 server to cloud.</li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Jahnavi Bidaraguppe Muniraju · Gold/Amber Resume Theme
+    </footer>
   </div>
-</section>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
